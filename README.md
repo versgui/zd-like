@@ -10,7 +10,8 @@ enregistrés.
   
 ### Installation & utilisation  
   
-#### Installation du client (le jeu en React)  
+#### Installation du client (le jeu en React)
+ * Allez dans le dossier __client__
  * Installation des vendors : `yarn install`  
  * Lancement du serveur : `yarn build`  
   
@@ -18,7 +19,7 @@ enregistrés.
 L'API, permettant la sauvegarde des scores, est conçue pour tourner sur AWS Lambda.  
 Idéalement, vous devriez trouver dans le dossier serverless une configuration Cloudformation, vous permettant de créer  en quelques lignes de commandes les fonctions Lambda et de configurer AWS API Gateway (pour le routage des requêtes)   ainsi que DynamoDB (permettant le stockage des scores).  
   
-Malheureusement, votre humble serviteur n'a pas trouvé le temps de s'y attaquer. Vous trouverez donc dans le dossier  __serverless__ deux fichiers :  
+Malheureusement, votre humble serviteur n'a pas trouvé le temps de s'y attaquer. Vous trouverez donc dans le dossier  __server__ deux fichiers :  
  * __get-scores.js__ : fonction Node à installer dans Lambda, permettant de récupérer les scores dans DynamoDB.  
   Elle doit être liée à une requête GET dans API Gateway.  
  * __set-score.js__ : une autre fonction Node à installer dans Lambda, permettant de sauvegarder les scores dans  
